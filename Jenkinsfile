@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Run Container') {
             steps {
-                sh 'docker rm -f toquenElDom || true'
+                sh 'docker rm -f toqueneldom || true'
                 sh 'docker run -d -p 8081:80 --name toqueneldom toqueneldom'
             }
         }
