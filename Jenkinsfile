@@ -6,13 +6,13 @@ pipeline {
             steps {
                 // Intenta modificar los permisos del socket de Docker
                 sh 'chmod 666 /var/run/docker.sock || true'
-                sh 'docker build --no-cache -t toquenElDom .'
+                sh 'docker build --no-cache -t toqueneldom .'
             }
         }
         stage('Run Container') {
             steps {
                 sh 'docker rm -f toquenElDom || true'
-                sh 'docker run -d -p 8081:80 --name toquenElDom toquenElDom'
+                sh 'docker run -d -p 8081:80 --name toqueneldom toqueneldom'
             }
         }
     }
