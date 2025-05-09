@@ -4,13 +4,15 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'sudo docker build --no-cache -t toquenElDom .'
+                // Intenta modificar los permisos del socket de Docker
+                sh 'chmod 666 /var/run/docker.sock || true'
+                sh 'docker build --no-cache -t toquenElDom .'
             }
         }
         stage('Run Container') {
             steps {
-                sh 'sudo docker rm -f toquenElDom || true'
-                sh 'sudo docker run -d -p 8081:80 --name toquenElDom toquenElDom'
+                sh 'docker rm -f toquenElDom || true'
+                sh 'docker run -d -p 8081:80 --name toquenElDom toquenElDom'
             }
         }
     }
