@@ -4,8 +4,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                // Intenta modificar los permisos del socket de Docker
-                sh 'chmod 666 /var/run/docker.sock || true'
                 sh 'docker build --no-cache -t toqueneldom .'
             }
         }
