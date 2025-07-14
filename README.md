@@ -68,8 +68,8 @@ cd toquenElDom
 ### 3. Run the project using Docker
 Ensure you have Docker installed on your machine. Then, build and run the container:
 ```bash
-docker build -t marimba-Project
-docker run -d -p 8080:80 --name marimba-project-container marimba-Project
+docker build -t marimba-project .
+docker run -d -p 80:80 marimba-project
 ```
 ### 4. Access the application
 Open your browser and navigate to http://localhost:8080 to explore the Marimbeta Music School platform.
