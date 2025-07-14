@@ -72,7 +72,7 @@ docker build -t marimba-project .
 docker run -d -p 80:80 marimba-project
 ```
 ### 4. Access the application
-Open your browser and navigate to http://localhost:8080 to explore the Marimbeta Music School platform.
+Open your browser and navigate to http://localhost to explore the Marimbeta Music School platform.
 
 ## 📂 Project Structure
 - HTML: Provides the structure for the pages, including index.html, home.html, about.html, and play.html.
